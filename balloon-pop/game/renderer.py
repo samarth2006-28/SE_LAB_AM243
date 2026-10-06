@@ -39,3 +39,22 @@ def draw_legend(surface, font):
         surf = font.render(label, True, COLOR_TEXT)
         surface.blit(surf, (x + 22, y))
         x += 22 + surf.get_width() + 20
+
+
+def draw_game_over(surface, font, reason, score):
+    """Dim the playfield and show why the round ended, the score, and how to restart."""
+    overlay = pygame.Surface(surface.get_size(), pygame.SRCALPHA)
+    overlay.fill((0, 0, 0, 140))
+    surface.blit(overlay, (0, 0))
+    cx, cy = surface.get_width() // 2, surface.get_height() // 2
+    big = pygame.font.SysFont("consolas", 40, bold=True)
+    lines = [
+        (big, reason, (255, 255, 255)),
+        (big, f"Final score: {score}", (255, 215, 80)),
+        (font, "Press R to play again", (230, 230, 230)),
+    ]
+    y = cy - 70
+    for f, text, color in lines:
+        surf = f.render(text, True, color)
+        surface.blit(surf, surf.get_rect(center=(cx, y)))
+        y += 55
