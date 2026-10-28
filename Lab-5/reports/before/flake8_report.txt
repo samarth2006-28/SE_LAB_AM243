@@ -1,0 +1,12 @@
+delivery_system.py:11:1: E302 expected 2 blank lines, found 1
+delivery_system.py:16:80: E501 line too long (96 > 79 characters)
+delivery_system.py:21:1: E302 expected 2 blank lines, found 1
+delivery_system.py:24:5: E722 do not use bare 'except'
+delivery_system.py:27:1: E302 expected 2 blank lines, found 1
+delivery_system.py:35:1: E302 expected 2 blank lines, found 1
+delivery_system.py:42:1: E302 expected 2 blank lines, found 1
+delivery_system.py:47:1: E302 expected 2 blank lines, found 1
+delivery_system.py:51:1: E302 expected 2 blank lines, found 1
+delivery_system.py:54:80: E501 line too long (80 > 79 characters)
+delivery_system.py:56:1: E302 expected 2 blank lines, found 1
+delivery_system.py:70:1: E305 expected 2 blank lines after class or function definition, found 1

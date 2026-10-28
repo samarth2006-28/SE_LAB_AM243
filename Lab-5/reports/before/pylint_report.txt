@@ -1,0 +1,27 @@
+************* Module delivery_system
+delivery_system.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+delivery_system.py:7:0: C0103: Constant name "next_id" doesn't conform to UPPER_CASE naming style (invalid-name)
+delivery_system.py:11:0: C0116: Missing function or method docstring (missing-function-docstring)
+delivery_system.py:11:0: W0102: Dangerous default value [] as argument (dangerous-default-value)
+delivery_system.py:12:4: W0603: Using the global statement (global-statement)
+delivery_system.py:21:0: C0116: Missing function or method docstring (missing-function-docstring)
+delivery_system.py:24:4: W0702: No exception type(s) specified (bare-except)
+delivery_system.py:27:0: C0116: Missing function or method docstring (missing-function-docstring)
+delivery_system.py:28:4: W0603: Using the global statement (global-statement)
+delivery_system.py:32:11: W0718: Catching too general exception Exception (broad-exception-caught)
+delivery_system.py:30:12: W1514: Using open without explicitly specifying an encoding (unspecified-encoding)
+delivery_system.py:30:12: R1732: Consider using 'with' for resource-allocating operations (consider-using-with)
+delivery_system.py:35:0: C0116: Missing function or method docstring (missing-function-docstring)
+delivery_system.py:42:0: C0116: Missing function or method docstring (missing-function-docstring)
+delivery_system.py:43:8: R1732: Consider using 'with' for resource-allocating operations (consider-using-with)
+delivery_system.py:47:0: C0116: Missing function or method docstring (missing-function-docstring)
+delivery_system.py:48:4: W0603: Using the global statement (global-statement)
+delivery_system.py:49:25: R1732: Consider using 'with' for resource-allocating operations (consider-using-with)
+delivery_system.py:51:0: C0116: Missing function or method docstring (missing-function-docstring)
+delivery_system.py:51:0: C0103: Function name "printQueue" doesn't conform to snake_case naming style (invalid-name)
+delivery_system.py:52:10: C0209: Formatting a regular string which could be an f-string (consider-using-f-string)
+delivery_system.py:56:0: C0116: Missing function or method docstring (missing-function-docstring)
+
+-----------------------------------
+Your code has been rated at 6.27/10
+
