@@ -1,0 +1,8 @@
+Order rejected: Unknown dishes: sushi
+Order rejected: Order needs a customer name
+Invalid status 'teleported' for order 2
+Order 42 not found
+Revenue today: 290
+Order queue at 2026-10-28 17:16:49.428260
+1 Asha delivered 290
+2 Ravi out_for_delivery 240
