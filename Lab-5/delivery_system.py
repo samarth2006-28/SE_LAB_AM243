@@ -1,5 +1,4 @@
 import json
-import pickle
 from datetime import datetime
 
 # Global state
@@ -19,10 +18,14 @@ def create_order(customer, items, order_history=[]):
     return order_history[-1]
 
 def update_order_status(order_id, status):
-    try:
-        orders[order_id]["status"] = status
-    except:
-        pass
+    if status not in VALID_STATUSES:
+        print("Invalid status %r for order %s" % (status, order_id))
+        return False
+    if order_id not in orders:
+        print("Order %s not found" % order_id)
+        return False
+    orders[order_id]["status"] = status
+    return True
 
 def read_menu_config(file="menu.json"):
     global menu
@@ -39,14 +42,16 @@ def daily_revenue():
             revenue = revenue + orders[o]["total"]
     return revenue
 
-def backup_orders(file="orders.pkl"):
-    f = open(file, "wb")
-    pickle.dump(orders, f)
+def backup_orders(file="orders.json"):
+    f = open(file, "w")
+    json.dump(orders, f)
     f.close()
 
-def restore_orders(file="orders.pkl"):
+def restore_orders(file="orders.json"):
     global orders
-    orders = pickle.load(open(file, "rb"))
+    data = json.load(open(file))
+    # JSON object keys are always strings, so turn order ids back into ints
+    orders = {int(k): v for k, v in data.items()}
 
 def printQueue():
     print("Order queue at %s" % datetime.now())
